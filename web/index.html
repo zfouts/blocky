@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>blocky</title>
-</head>
-<body>
-    <h1>blocky</h1>
-    <ul>
-    {{range .Links}}
-        <li><a href="{{.URL}}">{{.Title}}</a></li>
-    {{end}}
-    </ul>
-
+  <head>
+    <title>Blocky DNS Server</title>
+  </head>
+  <body>
+    <h1>Blocky DNS Server</h1>
+    <p>Blocked domains: {{.Stats.BlockedDomains}}</p>
+    <p>Blocked queries: {{.Stats.BlockedQueries}}</p>
+    <p>Blocked percentage: {{.Stats.BlockedPercentage}}%</p>
+    <p>Queries per second: {{.Stats.QPS}}</p>
+    <p>Cache size: {{.Stats.CacheSize}}</p>
     <p><span class="small">Version {{.Version}}   Build time {{.BuildTime}}</span></p> 
-    </body>
+  </body>
 </html>
